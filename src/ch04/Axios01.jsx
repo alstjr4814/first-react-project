@@ -2,26 +2,34 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./style.css";
 
-function Axios() {
-    const [users, setUsers] = useState([]);
-    const [refresh, setRefetch] = useState(true);
+function Axios01() {
+    const [ users, setUsers ] = useState([]);
+    const [ refetch, setRefetch ] = useState(true);
 
-    getUsersApi();
+    // getUsersApi();
 
-    const getUsersApi = async () => {
-        console.log("콘솔!!")
-        if (refresh) {
-            const response = await axios.get("http://192.168.2.101:8080/users")
-                console.log(response.data);
-                setUsers(response.data);
-                setRefetch(false);
-        }
+    // const getUsersApi = async () => {
+    //     console.log("콘솔!!")
+    //     if (refetch) {
+    //         const response = await axios.get("http://192.168.2.101:8080/users")
+    //         console.log(response.data);
+    //         setUsers(response.data);
+    //         setRefetch(false);
+    //     }
+    // }
 
-    }
+    // useEffect(() => {
+    //     console.log("useEffect!!!!");
+    // })
 
     useEffect(() => {
-        console.log("useEffect!!!!")
-    })
+        if (refetch) {
+            axios.get("http://192.168.2.101:8080/users")
+            .then(a => {
+                console.log(a.data[0].username);
+            });
+        }
+    }, [refetch]);
 
     return <>
         <table>
@@ -51,4 +59,4 @@ function Axios() {
     </>
 }
 
-export default Axios;
+export default Axios01;

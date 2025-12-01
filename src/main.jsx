@@ -14,6 +14,7 @@ import UseEffect03 from './ch03/UseEffect03';
 import UseEffect04 from './ch03/UseEffect04';
 import Axios01 from './ch04/Axios01';
 import Promise01 from './ch04/Promise01';
+import Axios02 from './ch04/Axios02';
 
 
 
@@ -36,6 +37,7 @@ const appObj = {
     searchName: <SearchName />,
     useEffect04: <UseEffect04 />,
     Axios01: <Axios01 />,
+    Axios02: <Axios02 />,
     Promise01: <Promise01 />,
 
 }
