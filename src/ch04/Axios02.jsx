@@ -1,71 +1,69 @@
-// import axios from "axios";
-// import { useState } from "react";
-//해당 폴더만 
-// function Axios02() {
-//     const [inputValue, setinputValue] = usestate({
-//         username: "",
-//     });
-//     const [users, setUsers] = useState([]);
+import axios from "axios";
+import { useState } from "react";
 
-//     const getUsersApi = async () => {
-//         const response = await axios.get("http://192.168.2.101:8080/users",{params: {username: inputValue.username}});
-//         setUsers(response.data);
-//     }
+function Axios02() {
+    const [ inputValue, setInputValue ] = useState({
+        username: "",
+        name: "",
+    });
+    const [ users, setUsers ] = useState([]);
 
-//     const hadleinputOnChange = (e) => {
-//         const { name, value } = e.target;
-//         setinputValue({
-//             ...inputValue,
-//             [name]: value,
-//         });
-//     }
+    const getUsersApi = async () => {
+        const response = await axios.get("http://192.168.2.101:8080/users", {params: {username: inputValue.username}})
+        setUsers(response.data);
+    }
 
-//         const handleiputOnKeyDown = (e) => {
-//             console.log(e)
-//             if (e.keyCode === 13) {
+    const handleInputOnChange = (e) => {
+        const { name, value } = e.target;
+        setInputValue({
+            ...inputValue,
+            [name]: value,
+        });
+    }
 
-//             }
-//         }
-//         const handleSearchOnClick = () => {
-//             getUsersApi();
+    const handleInputOnKeyDown = (e) => {
+        console.log(e)
+        if (e.keyCode === 13) {
+            getUsersApi();
+        }
+    }
 
-//         }
+    const handleSearchOnClick = () => {
+        getUsersApi();
+    }
 
+    return <>
+        <input type="text" 
+            name="username" 
+            value={inputValue.username} 
+            onChange={handleInputOnChange}
+            onKeyDown={handleInputOnKeyDown} />
+        <button onClick={handleSearchOnClick}>검색</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>username</th>
+                    <th>password</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>role1</th>
+                    <th>role2</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    users.map(u => <tr>
+                        <td>{u.username}</td>
+                        <td>{u.password}</td>
+                        <td>{u.name}</td>
+                        <td>{u.email}</td>
+                        <td>{u.roles[0]}</td>
+                        <td>{u.roles[1]}</td>
+                    </tr>)
+                }
+            </tbody>
+        </table>
+    </>
+}
 
-//     }
-
-//     return <>
-//         <input type="text"
-//             nmae="username"
-//             value={inputValue.username}
-//             onChange={hadleinputOnChange}
-//             onKeyDown={handleiputOnKeyDown} />
-//         <button onClick={handleSearchOnClick}>검색</button>
-//         <table>
-//             <thead>
-//                 <tr>
-//                     <th>username</th>
-//                     <th>password</th>
-//                     <th>name</th>
-//                     <th>email</th>
-//                     <th>role1</th>
-//                     <th>role2</th>
-//                 </tr>
-//             </thead>
-//             <tbody>
-//                 {
-//                     users.map(u => <tr>
-//                         <td>{u.username}</td>
-//                         <td>{u.password}</td>
-//                         <td>{u.name}</td>
-//                         <td>{u.email}</td>
-//                         <td>{u.roles[0]}</td>
-//                         <td>{u.roles[1]}</td>
-//                     </tr>)
-//                 }
-//             </tbody>
-//         </table>
-//     </>
-
-
-// export default Axios02;
+export default Axios02;
