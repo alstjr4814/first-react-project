@@ -1,6 +1,6 @@
 // import axios from "axios";
 // import { useState } from "react";
-
+//해당 폴더만 
 // function Axios02() {
 //     const [inputValue, setinputValue] = usestate({
 //         username: "",
