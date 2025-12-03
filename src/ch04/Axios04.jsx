@@ -139,6 +139,14 @@ function Axios04() {
         });
     }
 
+    const reqDeleteOnClick = () => {
+        api.delete("/req/data1/20", {
+            data: {
+                name: "김준일",
+            }
+        });
+    }
+
     return <>
         <button onClick={reqGetnClick1}>reqGet1</button>
         <button onClick={reqGetOnClick2}>reqGet2</button>
@@ -151,7 +159,7 @@ function Axios04() {
         <button onClick={reqPostOnClick5}>reqPost5</button>
         <button onClick={reqPutOnClick}>reqPut</button>
         <button onClick={reqPatchOnClick}>reqPatch</button>
-        <button >10</button>
+        <button onClick={reqDeleteOnClick}>reqDelete</button>
     </>
 }
 
