@@ -17,12 +17,13 @@ import Promise01 from './ch04/Promise01';
 import Axios02 from './ch04/Axios02';
 import Axios03 from './ch04/Axios03';
 import Axios04 from './ch04/Axios04';
+import Axios05 from './ch04/Axios05';
 
 
 
 
 
-const currentApp = "Axios04";
+const currentApp = "Axios05";
 
 const appObj = {
     ch01: <App01 />,
@@ -42,6 +43,7 @@ const appObj = {
     Axios02: <Axios02 />,
     Axios03: <Axios03 />,
     Axios04: <Axios04 />,
+    Axios05: <Axios05 />,
     Promise01: <Promise01 />,
 
 }
