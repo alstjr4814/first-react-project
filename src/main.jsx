@@ -18,12 +18,22 @@ import Axios02 from './ch04/Axios02';
 import Axios03 from './ch04/Axios03';
 import Axios04 from './ch04/Axios04';
 import Axios05 from './ch04/Axios05';
+import Auth01 from './ch05/Auth01';
+import Auth02 from './ch05/Auth02';
+import Router01 from './ch06/Router01';
+import Router02 from './ch06/Router02';
+import Router03 from './ch06/Router03';
+import Router04 from './ch06/Router04';
+import Router05 from './ch06/Router05';
+import Css from './ch07/Css';
+import Css01 from './ch07/Css01';
+import Css02 from './ch07/Css02';
 
 
 
 
 
-const currentApp = "Axios05";
+const currentApp = "Css02";
 
 const appObj = {
     ch01: <App01 />,
@@ -45,6 +55,16 @@ const appObj = {
     Axios04: <Axios04 />,
     Axios05: <Axios05 />,
     Promise01: <Promise01 />,
+    Auth01: <Auth01 />,
+    Auth02: <Auth02 />,
+    Router01: <Router01 />,
+    Router02: <Router02 />,
+    Router03: <Router03 />,
+    Router04: <Router04 />,
+    Router05: <Router05 />,
+    Css: <Css />,
+    Css01: <Css01 />,
+    Css02: <Css02 />,
 
 }
 
