@@ -28,12 +28,18 @@ import Router05 from './ch06/Router05';
 import Css from './ch07/Css';
 import Css01 from './ch07/Css01';
 import Css02 from './ch07/Css02';
+import Zustand01 from './ch08/Zustand01';
+import Zustand02 from './ch08/Zustand02';
+import Zustand03 from './ch08/Zustand03';
+import ReactQuery01 from './ch09/ReactQuery01';
+import ReactQuery02 from './ch09/ReactQuery02';
 
 
 
 
 
-const currentApp = "Css02";
+
+const currentApp = "ReactQuery02";
 
 const appObj = {
     ch01: <App01 />,
@@ -65,6 +71,11 @@ const appObj = {
     Css: <Css />,
     Css01: <Css01 />,
     Css02: <Css02 />,
+    Zustand01: <Zustand01 />,
+    Zustand02: <Zustand02 />,
+    Zustand03: <Zustand03 />,
+    ReactQuery01: <ReactQuery01 />,
+    ReactQuery02: <ReactQuery02 />,
 
 }
 
